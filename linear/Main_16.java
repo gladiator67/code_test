@@ -1,4 +1,4 @@
-package com.aaa.linear;
+package com.aaa.linear;        // https://mundol-colynn.tistory.com/126
 
 import java.util.ArrayList;
 import java.util.Arrays;
