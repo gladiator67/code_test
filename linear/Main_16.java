@@ -14,7 +14,7 @@ public class Main_16 {
         Queue<Integer> queue = new LinkedList<>();
 
         for(int i=0 ; i<progresses.length; i++) {
-            queue.add((int)Math.ceil((100.0-progresses[i])/speeds[i]));
+            queue.add((int)Math.ceil((100.0-progresses[i])/speeds[i]));   // 예) Math.ceil(2.4) = 3
         }
 
         while(!queue.isEmpty()) {
