@@ -12,7 +12,7 @@ public class Main_06 {
         Map<Integer, Double> fails = new HashMap<>();
 
         for (int stage : stages) {
-            stage_challengers[stage] += 1;
+            stage_challengers[stage] += 1;   // 각 stage에 대한 실패수를 저장, 인덱스는 각 stage를 지칭
         }
 
         double total = stages.length;
