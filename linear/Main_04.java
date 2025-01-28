@@ -15,9 +15,9 @@ public class Main_04 {
         int[] scores = new int[3];
 
         for(int i=0 ; i<answers.length ; i++) {
-            if(answers[i] == pattern1[i%5]) scores[0]++;
-            if(answers[i] == pattern2[i%8]) scores[1]++;
-            if(answers[i] == pattern3[i%10]) scores[2]++;
+            if(answers[i] == pattern1[i%5]) scores[0]++;  // 패턴을 반복하기위해 % 연산자를 사용
+            if(answers[i] == pattern2[i%8]) scores[1]++;  // 패턴을 반복하기위해 % 연산자를 사용
+            if(answers[i] == pattern3[i%10]) scores[2]++; // 패턴을 반복하기위해 % 연산자를 사용
         }
 
         int maxScore = Arrays.stream(scores).max().getAsInt();
