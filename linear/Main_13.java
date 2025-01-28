@@ -12,7 +12,7 @@ public class Main_13 {
         Stack<Integer>[] lanes = new Stack[board.length];
         for(int j=0 ; j<lanes.length ; j++) {
             lanes[j] = new Stack<>();
-        }
+        }   // Lane를 초기화
 
         for(int i = board.length - 1 ; i>=0 ; i--) {
             for(int j=0 ; j<board[i].length ; j++) {
@@ -20,9 +20,10 @@ public class Main_13 {
                     lanes[j].push(board[i][j]) ; 
                 }
             }
-        }
+        }   // 초기화한 Laned에 Board의 값, 즉 인형을 삽입한다. 
 
-        Stack<Integer> bucket = new Stack<>();
+        // 상품 바구니 Bucket을 생성하고 작업을 수행합니다.
+        Stack<Integer> bucket = new Stack<>();   
 
         for(int move : moves) {
             if(!lanes[move-1].isEmpty()) {
