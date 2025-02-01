@@ -13,25 +13,29 @@ public class Main_22 {
     public static int[] solution(String[] genres, int[] plays) {
         ArrayList<Integer> answer = new ArrayList<>();
 
-        Map<String, Map<Integer, Integer>> genresMap = new HashMap<>();
         Map<String, Integer> playMap = new HashMap<>();
+        Map<String, Map<Integer, Integer>> genresMap = new HashMap<>();
 
         for(int i=0 ; i< genres.length ; i++) {
             String genre = genres[i];
             int play = plays[i];
 
+            // playMap과 genresMap을 초기화
             if(!genresMap.containsKey(genre)){
-                genresMap.put(genre,new HashMap<>());
                 playMap.put(genre, 0);
+                genresMap.put(genre,new HashMap<>());
             } 
 
-            genresMap.get(genre).put(i, play);
+            // playMap과 genresMap에 값을 삽입하여 Map객체 생성
             playMap.put(genre, playMap.get(genre) + play);
+            genresMap.get(genre).put(i, play);
         }
 
+        // playMap을 Sorting
         List<String> keySet = new ArrayList<>(playMap.keySet());
         Collections.sort(keySet, (s1, s2) -> playMap.get(s2) - playMap.get(s1));
 
+        // genresMap을 Sorting
         for(String key : keySet) {
             Map<Integer, Integer> map = genresMap.get(key);
             List<Integer> genre_keySet = new ArrayList<>(map.keySet());
