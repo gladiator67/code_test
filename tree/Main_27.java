@@ -7,8 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main_27 {
 
-    public static int[] solution(String[] enroll, String[] referral, 
-    									String[] seller, int[] amount) {
+    public static int[] solution(String[] enroll, String[] referral, String[] seller, int[] amount) {
         int[] answer = new int[enroll.length];
         Map<String, String> parentMap = new HashMap<>();
         Map<String, Integer> memberIndexMap = new HashMap<>();
@@ -41,10 +40,8 @@ public class Main_27 {
     }
 
         public static void main(String[] args) {
-        String[] enroll = {"john", "mary", "edward", "sam", 
-        									"emily", "jaimie", "tod", "young"};
-        String[] referral = {"-", "-", "mary", "edward", "mary", 
-        									"mary", "jaimie", "edward"};
+        String[] enroll = {"john", "mary", "edward", "sam", "emily", "jaimie", "tod", "young"};
+        String[] referral = {"-", "-", "mary", "edward", "mary", "mary", "jaimie", "edward"};
         String[] seller = {"young", "john", "tod", "emily", "mary"};
         int[] amount = {12, 4, 2, 5, 10};
 
