@@ -14,7 +14,7 @@ public class Main_19 {
             map.put(name, map.getOrDefault(name, 0) + 1);
         }
 
-        // 지원자를 완주한 사람에게서 삭제하며 그값이 0이 되었을때 해당 이름을 반환
+        // 지원자를 완주한 사람의 Map에서 삭제하며 그값이 0이 되었을때 해당 이름을 반환
         for(String name : participant) {
             if(map.getOrDefault(name, 0) == 0) {
                 return name;
