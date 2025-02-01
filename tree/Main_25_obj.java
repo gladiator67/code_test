@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main_25_obj {
 	
-	// 7
+    // 7
     // A B C
     // B D .
     // C E F
@@ -35,8 +35,7 @@ public class Main_25_obj {
         }
     }
 
-    public static void searchNode(Node node, char data, 
-    									char leftData, char rightData) {
+    public static void searchNode(Node node, char data, char leftData, char rightData) {
         if(node == null) {
             return;
         } else if (node.data == data) {
@@ -94,11 +93,8 @@ public class Main_25_obj {
     }
     
     public static void main(String[] args) {
-        char[] array_nodes = {'A','B','C','D',0,'E','F',0,0,0,0,0,0,0,'G'};
-        Arrays.stream(solution_array(array_nodes)).forEach(System.out::println);
 
-        String[] obj_nodes = {"A B C", "B D .", "C E F", "E . .", 
-        									"F . G", "D . .", "G . ."};
+        String[] obj_nodes = {"A B C", "B D .", "C E F", "E . .", "F . G", "D . .", "G . ."};
 
         for(int i=0 ; i<obj_nodes.length ;i++) {
             String[] data = obj_nodes[i].split(" ");
