@@ -9,15 +9,20 @@ import java.util.stream.Collectors;
 public class Main_23 {
 
     public static int[] solution(String[] id_list, String[] report, int k) {
+        // reportedMap객체 생성 (Key는 신고당한 user, Value는 신고한 user)
         Map<String, HashSet<String>> reportedUser = new HashMap<>(); 
+        // idMap 객체 생성. 각각의 ID에 대해 index 부여
         Map<String, Integer> idMap = new HashMap<>(); 
+        
         int[] answer = new int[id_list.length];
 
+        // Map 객체 초기화
         for (int i=0 ; i<id_list.length ; i++) {
             idMap.put(id_list[i], i);
             reportedUser.put(id_list[i], new HashSet<>());
         }
 
+        // reportedMap 객체에 값 입력
         for(int i = 0 ; i<report.length ; i++) {
             String[] s = report[i].split(" ");
             String from = s[0];
@@ -26,6 +31,7 @@ public class Main_23 {
             reportedUser.get(to).add(from);
         }
 
+        // 결과물 생성
         for(String name : reportedUser.keySet()) {
             if(reportedUser.get(name).size() >= k) {
                 for(String id : reportedUser.get(name)) {
