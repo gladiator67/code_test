@@ -35,8 +35,7 @@ public class Main_36 {
 
         dist[start] = 0;
 
-        Queue<Node> queue = new PriorityQueue<>((n1, n2) 
-        						-> Integer.compare(n1.cost, n2.cost));
+        Queue<Node> queue = new PriorityQueue<>((n1, n2) -> Integer.compare(n1.cost, n2.cost));
         queue.add(new Node(start, 0));
 
         while(!queue.isEmpty()) {
