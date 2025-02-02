@@ -9,9 +9,10 @@ public class Main_27 {
 
     public static int[] solution(String[] enroll, String[] referral, String[] seller, int[] amount) {
         int[] answer = new int[enroll.length];
-        Map<String, String> parentMap = new HashMap<>();
-        Map<String, Integer> memberIndexMap = new HashMap<>();
+        Map<String, String> parentMap = new HashMap<>();  // 판매원의 부모노드 생성
+        Map<String, Integer> memberIndexMap = new HashMap<>();  // 판매원의 ID를 index로 생성
 
+        // 두 Map 객체를 초기화
         for(int i=0 ; i<enroll.length ; i++) {
             parentMap.put(enroll[i], referral[i]);
             memberIndexMap.put(enroll[i], i);
@@ -21,14 +22,14 @@ public class Main_27 {
             String curName = seller[i];
             int profit = amount[i]*100;
 
-            while(!curName.equals("-")) {
+            while(!curName.equals("-")) {   // 최상위 노드까지 loop
                 int profit4Parent = profit/10;
                 int curProfit = profit - profit4Parent;
 
                 answer[memberIndexMap.get(curName)] += curProfit;
 
-                curName = parentMap.get(curName);
-                profit /= 10;
+                curName = parentMap.get(curName);  // 부모 노드로 이동하여 다시 정산
+                profit /= 10;  // 부모노드로 이동하여 이익을 다시 정산. 10% 차감
 
                 if(profit < 1) {
                     break;
