@@ -1,7 +1,5 @@
 package com.aaa.tree;
 
-import java.util.Arrays;
-
 public class Main_25_obj {
 	
     // 7
