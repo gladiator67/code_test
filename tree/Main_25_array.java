@@ -11,7 +11,7 @@ public class Main_25_array {
     // E . .
     // F . G
     // D . .
-    // G . .
+    // G . .     https://stdio-han.tistory.com/138
     
     // [A,B,C,D,,E,F,,,,,,,,G]
    
