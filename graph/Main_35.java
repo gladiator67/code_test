@@ -52,7 +52,7 @@ public class Main_35 {
 
     public static void main(String[] args) {
         // int[][] graph = {{1,2},{1,3},{2,4},{2,5},{3,6},
-        //						{3,7},{4,8},{5,8},{6,9},{7,9}};
+        //					{3,7},{4,8},{5,8},{6,9},{7,9}};
         int[][] graph = {{1,3},{3,4},{3,5},{5,2}};
         int start = 1;
         // int n=9;
