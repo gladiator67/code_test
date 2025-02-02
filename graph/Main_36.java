@@ -66,7 +66,6 @@ public class Main_36 {
         int n=5;
         // int n=4;
 
-        System.out.println(Arrays.stream(solution(graph, start, n))
-        							.boxed().collect(Collectors.toList()));
+        System.out.println(Arrays.stream(solution(graph, start, n)).boxed().collect(Collectors.toList()));
     }
 }
