@@ -33,6 +33,15 @@ public class JavaAdjacentList {
             }
 
             System.out.println();
+            
+            // node[0] -> 1 2 
+            // node[1] -> 0 3 4
+            // node[2] -> 0 5 6
+            // node[3] -> 1 7
+            // node[4] -> 1 7
+            // node[5] -> 2 7
+            // node[6] -> 2 7
+            // node[7] -> 3 4 5 6
         }
     }
 }
