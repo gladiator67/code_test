@@ -3,7 +3,7 @@ package com.aaa.graph;
 import java.util.Queue;
 import java.util.ArrayDeque;
 
-public class Main_39 {
+public class Main_39_passed {
     public static int[] dx = {0,0,1,-1};
     public static int[] dy = {1,-1,0,0};
     public static int N, M;
