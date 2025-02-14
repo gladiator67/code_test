@@ -1,6 +1,6 @@
 package com.aaa.graph;
 
-public class Main_38 {
+public class Main_38_Mtrx {
 
     private static boolean[] visited;
     
