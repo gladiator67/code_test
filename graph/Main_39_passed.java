@@ -35,7 +35,7 @@ public class Main_39_passed {
             int x = p.x;
             
             if (maps[y].charAt(x) == end){
-                return visited[y][x] -1;
+                return visited[y][x] - 1;
             }
             
             for (int i = 0 ; i < 4; i++){
